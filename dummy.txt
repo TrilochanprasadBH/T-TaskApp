@@ -1,0 +1,28 @@
+// //short quick revision of types in TS 
+// let hmm:any= "any data type";
+// let ohh: unknown = "any data type"  //this is better than any 
+// let name: string="nidhish";
+// let arrofstr : string[] =["ok","tp"];
+// let arrofnum : number[] = [1,2,3];
+
+// //tuples : can have multiple types of data , but fixed length
+// let tuples: [number, string, object?]= [9,"ok", {a:"trilo"}];
+// let marks : number |string = "ninety"
+
+// //interface 
+//  interface Person{
+//   name:string,
+//   age?:number 
+//  }
+
+//  let person:Person= {name:"trilo", age:20}
+//  let arrayofpersons : Person[] = [{name:"p", age:90}, {name:"ok", age:56}]
+ 
+//  function hesaru(para:string):void{
+//   console.log(para)
+//   //void is used when fn doesnt return but just does some action lyk console etc 
+//   //also by default it means it returns undefined 
+//  }
+//  let fam : (kaam:string)=> void 
+//  let naam:(name:string)=> never  
+//  // never doesnt return anything  
