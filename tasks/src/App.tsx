@@ -1,15 +1,17 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import Input from './components/Input';
 
 
-function App() {
+const  App : React.FC = ()=> {
   
   
   
   return (
     <div className="App">
-     <p>T-Tasks App</p>
+     <span className='heading'>T-Tasks</span>
+      <Input/>
     </div>
   );
 }
