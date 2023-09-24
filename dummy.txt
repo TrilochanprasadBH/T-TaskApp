@@ -26,3 +26,50 @@
 //  let fam : (kaam:string)=> void 
 //  let naam:(name:string)=> never  
 //  // never doesnt return anything  
+
+
+extending types 
+
+type Ok ={
+    name: string,
+    age:number 
+}
+
+type z = Ok & {
+    place: string 
+}
+
+or type x = type Ok & type z 
+or type x = type Ok or type z 
+now type x =  {
+    name,
+    age,
+    place 
+}
+
+Interface merging 
+
+interface: interface declarations can be merged. 
+If you declare the same interface name multiple times, 
+TypeScript will automatically merge the declarations together.
+interface Person {
+    name: string;
+}
+
+interface Person {
+    age: number;
+}
+
+// Merged Person interface
+const person: Person = { name: "Alice", age: 30 };
+
+
+MIX 
+
+type DSA = {
+    practise : string 
+}
+
+interface Geek extends dsa {
+    home: string 
+}
