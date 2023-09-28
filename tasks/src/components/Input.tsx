@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./styles.css"
 
 interface Props{
@@ -14,9 +14,13 @@ interface Props{
 const Input = ({task, setTask, handleAdd}:Props) => {
     //3. as we receive state here, we get error coz their type is not defined , so create a interface and then assign type to props.
     //later these interface or type declarations can be moved to a single file and import here, better code quality
-  return (
-    <form className='input' onSubmit={(e)=>handleAdd(e)}>
+    const inputRef= useRef<HTMLInputElement>(null);
+  
+  
+    return (
+    <form className='input' onSubmit={(e)=>{handleAdd(e); inputRef.current?.blur();}}>
         <input type='input' 
+        ref={inputRef}
         placeholder='Enter your task' 
         className='my_task'
         value={task}

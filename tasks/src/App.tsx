@@ -4,6 +4,7 @@ import './App.css';
 import Input from './components/Input';
 import { useState } from 'react';
 import { Task } from './models';
+import TaskList from './components/TaskList';
 
 const  App : React.FC = ()=> {
   const [task,setTask]= useState<string>("")
@@ -29,6 +30,7 @@ const  App : React.FC = ()=> {
      <span className='heading'>T-Tasks</span>
       <Input task={task} setTask={setTask} handleAdd={handleAdd}/>
       {/* 2. passing both task and setTask as props to input component, assign types in input component, hover over them  to know types here  */}
+      <TaskList tasks={tasks} setTasks={setTasks}/>
     </div>
   );
 }
