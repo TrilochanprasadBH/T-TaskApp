@@ -1,6 +1,6 @@
 .input {
   display: flex;
-  width: 90%;
+  width: 95%;
   position: relative;
   align-items: center;
 }
@@ -16,7 +16,7 @@
 }
 
 .my_task:focus {
-  box-shadow: 0 0 1px 1000px rgba(223, 124, 124, 0.5);
+  box-shadow: 0 0 1px 1000px rgba(97, 203, 230, 0.5);
   outline: none;
 }
 
@@ -29,22 +29,103 @@
   right: 0px;
   border: none;
   font-size: 20px;
-  background-color: pink;
+  background-color: rgb(240, 230, 140);
   color: black;
   transition: 0.2s all;
-  box-shadow: 0 0 12px rgb(237, 151, 151);
+  box-shadow: 0 0 12px rgb(224, 133, 121);
 }
 .input_submit:hover {
-  background-color: rgb(224, 104, 124);
+  background-color: rgb(245, 244, 239);
 }
 .input_submit:active {
   transform: scale(0.8);
-  box-shadow: 0 0 5px rgb(214, 131, 131);
+  box-shadow: 0 0 5px rgb(12, 12, 12);
+}
+
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .task {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 90%;
+  /* flex-wrap: wrap; */
+  width: 47.5%;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightseagreen;
+}
+.task_remove {
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 47.5%;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: tomato;
+}
+.singleTask {
+  display: flex;
+  /* width: 35%; */
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  background-color: rgb(235, 240, 242);
+  transition: 0.2s;
+}
+.singleTask:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.02);
+}
+.task_heading {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.singleTask_Text {
+  flex: 1;
+  border: none;
+  font-size: 20px;
+  /* .flex-item { explnation example 
+    flex: 1; /* Equivalent to flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+  /* } */
+}
+
+.singleTask_Text:focus {
+  outline: none;
+}
+
+.icons {
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .task {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+
+  .task {
+    width: 95%;
+    margin-bottom: 5px;
+  }
+  .task_remove {
+    width: 95%;
+    margin-bottom: 5px;
+  }
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
 }
